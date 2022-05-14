@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using RPG.Movement;
 using RPG.Core;
 using UnityEngine;
@@ -54,6 +54,13 @@ namespace RPG.Combat
         private bool IsInRange()
         {
             return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
+        }
+
+        public bool CanAttack(CombatTarget combatTarget)
+        {
+            if (combatTarget == null) return false;
+            Health targetToTest = combatTarget.GetComponent<Health>();
+            return !targetToTest.IsDead() && targetToTest != null;
         }
 
         public void Attack(CombatTarget combatTarget)
