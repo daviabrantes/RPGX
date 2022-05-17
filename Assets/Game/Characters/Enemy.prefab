@@ -158,6 +158,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38a0de54e3809142b184ffa477879c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5288579162278582722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2753909526877040647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0128d647d6b054a8d40bb623d642d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7298083353442330669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +183,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 5
+--- !u!114 &8713846307106086660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2753909526877040647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dce67f04c63bb24ba7699bd64641fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

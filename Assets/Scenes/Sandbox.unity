@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2753909527301985490, guid: b6d5dd7cf3e30d2479975468a8471955, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d5dd7cf3e30d2479975468a8471955, type: 3}
 --- !u!1001 &162891773
@@ -940,6 +944,26 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.38300002, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1539580730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2753909526877040647, guid: b6d5dd7cf3e30d2479975468a8471955, type: 3}
+  m_PrefabInstance: {fileID: 143084236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1539580731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539580730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da673a3517bc02f40b2a7fff2114f16e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponRange: 2
+  timeBetweenAttacks: 1
+  weaponDamage: 5
 --- !u!4 &1578206884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 92f411609fca4d74d98af8e1bd1d4732, type: 3}
