@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace RPG.Core
 {
-    public class PeristentObjectSpawner : MonoBehaviour
+    public class PersistentObjectSpawner : MonoBehaviour
     {
         [SerializeField] GameObject persistentObjectPrefab;
 
