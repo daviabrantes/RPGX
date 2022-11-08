@@ -134,6 +134,9 @@ MonoBehaviour:
   weaponRange: 2
   timeBetweenAttacks: 1
   weaponDamage: 10
+  weaponPrefab: {fileID: 181534, guid: 13af847dfa6dbe844ba4b7c902f98f67, type: 3}
+  handTransform: {fileID: 5374231902954423232}
+  weaponOverride: {fileID: 22100000, guid: efb1f1e4227dbc64dabb5e6d8d30d1f1, type: 2}
 --- !u!1001 &5374231902954490436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,6 +144,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4761745359589932715}
     m_Modifications:
+    - target: {fileID: 164946, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166696, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 191330, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
       propertyPath: m_Name
       value: Character_Knights_Soldier_02
@@ -1287,3 +1298,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+--- !u!4 &5374231902954423232 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461188, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+  m_PrefabInstance: {fileID: 5374231902954490436}
+  m_PrefabAsset: {fileID: 0}
