@@ -57,6 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &6176480419928517359 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+  m_PrefabInstance: {fileID: 6176480419928137185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7611717801243195541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,11 +121,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5734660250321562693, guid: 0bc2795c5ca2f7742bdbcf06c3d61872, type: 3}
-    - {fileID: 1318053316156094800, guid: 0bc2795c5ca2f7742bdbcf06c3d61872, type: 3}
-    - {fileID: 5663343788367297662, guid: 0bc2795c5ca2f7742bdbcf06c3d61872, type: 3}
-    - {fileID: 522478158886176293, guid: 0bc2795c5ca2f7742bdbcf06c3d61872, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc2795c5ca2f7742bdbcf06c3d61872, type: 3}
 --- !u!1 &2753909526877040647 stripped
 GameObject:
@@ -170,6 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0128d647d6b054a8d40bb623d642d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  maxSpeed: 6
 --- !u!114 &7298083353442330669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +186,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 5
---- !u!114 &8713846307106086660
+  suspicionTime: 2
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 3
+  patrolSpeedFraction: 0.2
+--- !u!114 &7733044229223915232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,6 +200,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2753909526877040647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dce67f04c63bb24ba7699bd64641fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: da673a3517bc02f40b2a7fff2114f16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBetweenAttacks: 1
+  handTransform: {fileID: 6176480419928517359}
+  weapon: {fileID: 11400000, guid: 0b8330b845bc84f4d9d1f0e68964a527, type: 2}
