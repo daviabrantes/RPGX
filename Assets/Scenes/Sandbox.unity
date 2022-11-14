@@ -1561,7 +1561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &227266518
 Transform:
   m_ObjectHideFlags: 0
@@ -4611,7 +4611,11 @@ PrefabInstance:
     - target: {fileID: 7818363729368543839, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 0b8330b845bc84f4d9d1f0e68964a527, type: 2}
+      objectReference: {fileID: 11400000, guid: 7a282407eb46149469df49c472f02022, type: 2}
+    - target: {fileID: 7818363729368543839, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 7818363728905986709}
     - target: {fileID: 7818363729372737317, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
       propertyPath: m_Name
       value: Core
@@ -4690,6 +4694,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
+--- !u!4 &7818363728905986709 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2744226070757624355, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
+  m_PrefabInstance: {fileID: 7818363728905986708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7849269135300971801
 GameObject:
   m_ObjectHideFlags: 0
