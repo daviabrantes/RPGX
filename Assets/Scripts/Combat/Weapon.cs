@@ -1,4 +1,5 @@
 using UnityEngine;
+using RPG.Core;
 
 namespace RPG.Combat
 {
@@ -8,6 +9,7 @@ namespace RPG.Combat
         [SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] GameObject equippedPrefab = null;
         [SerializeField] bool isRightHanded = true;
+        [SerializeField] Projectile projectile = null;
 
         [SerializeField] float weaponRange = 2f;
         public float WeaponRange { get { return weaponRange; } }
@@ -20,9 +22,7 @@ namespace RPG.Combat
         {
             if (equippedPrefab != null)
             {
-                Transform handTransform;
-                if (isRightHanded) handTransform = rightHand;
-                else handTransform = leftHand;
+                Transform handTransform = GetTransformHand(rightHand, leftHand);
                 Instantiate(equippedPrefab, handTransform);
             }
 
@@ -30,6 +30,25 @@ namespace RPG.Combat
             {
                 animator.runtimeAnimatorController = animatorOverride;
             }
+        }
+
+        private Transform GetTransformHand(Transform rightHand, Transform leftHand)
+        {
+            Transform handTransform;
+            if (isRightHanded) handTransform = rightHand;
+            else handTransform = leftHand;
+            return handTransform;
+        }
+
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target)
+        {
+            Projectile projectileInstance = Instantiate(projectile, GetTransformHand(rightHand, leftHand).position, Quaternion.identity);
+            projectileInstance.SetTarget(target);
+        }
+
+        public bool HasProjectile()
+        {
+            return projectile != null;
         }
     }
 }
