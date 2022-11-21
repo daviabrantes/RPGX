@@ -2315,7 +2315,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936320306}
-  m_LocalRotation: {x: 0.25941196, y: -0.53874445, z: 0.17887211, w: 0.78132236}
+  m_LocalRotation: {x: 0.25941196, y: -0.5387444, z: 0.17887208, w: 0.7813223}
   m_LocalPosition: {x: 6.01, y: 7.42, z: 8.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4244,6 +4244,7 @@ Transform:
   m_Children:
   - {fileID: 1044394909}
   - {fileID: 356234224}
+  - {fileID: 1841823536}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4341,6 +4342,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4775219554002278, guid: 6b444276162548b4e9107350b71e775a, type: 3}
   m_PrefabInstance: {fileID: 1817789975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1841823535
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1748139649}
+    m_Modifications:
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.418
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.697
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301419287833152875, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+      propertyPath: m_Name
+      value: Fireball Pickup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+--- !u!4 &1841823536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6465748287654016526, guid: 991fc52fb90e312419eeeef98176e4d6, type: 3}
+  m_PrefabInstance: {fileID: 1841823535}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1876345159
 GameObject:
@@ -4745,7 +4808,7 @@ PrefabInstance:
     - target: {fileID: 7818363729368543839, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 0b8330b845bc84f4d9d1f0e68964a527, type: 2}
+      objectReference: {fileID: 11400000, guid: 918173e2a97595a439517676d7f747a2, type: 2}
     - target: {fileID: 7818363729368543839, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
       propertyPath: rightHandTransform
       value: 
