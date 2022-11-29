@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -28,7 +29,6 @@ namespace RPG.Combat
         private void ShowPickup(bool shouldShow)
         {
             GetComponent<Collider>().enabled = shouldShow;
-            transform.GetChild(0).gameObject.SetActive(shouldShow);
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(shouldShow);
