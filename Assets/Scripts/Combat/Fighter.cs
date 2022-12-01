@@ -5,6 +5,7 @@ using RPG.Core;
 using UnityEngine;
 using System;
 using RPG.Saving;
+using RPG.Attributes;
 
 namespace RPG.Combat
 {
