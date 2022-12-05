@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 32.942963, y: -41.42}
-  m_SizeDelta: {x: 46, y: 22.12}
+  m_AnchoredPosition: {x: 32.38002, y: -46.06424}
+  m_SizeDelta: {x: 44.8741, y: 31.4085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2635614286308179854
 CanvasRenderer:
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Health: '
+  m_Text: 'Target Health: '
 --- !u!1 &5067404187119522882
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 82.24896, y: -41.419968}
+  m_AnchoredPosition: {x: 82.249, y: -50.708}
   m_SizeDelta: {x: 48.0767, y: 22.12}
   m_Pivot: {x: 0.5471664, y: 0.5}
 --- !u!222 &8850999500780677320

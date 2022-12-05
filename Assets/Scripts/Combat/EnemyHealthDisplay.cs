@@ -16,9 +16,10 @@ namespace RPG.Combat
 
         private void Update()
         {
-            if (fighter.GetTarget() != null)
+            if (fighter.GetTarget() == null)
             {
                 GetComponent<Text>().text = "No Target";
+                return;
             }
             health = fighter.GetTarget();
             GetComponent<Text>().text = health.GetPercentage().ToString("F0") + "%";
