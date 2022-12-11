@@ -38,6 +38,7 @@ namespace RPG.Saving
         public void Delete(string saveFile)
         {
             File.Delete(GetPathFromSaveFile(saveFile));
+            print("Deleting Save");
         }
 
         private Dictionary<string, object> LoadFile(string saveFile)
