@@ -16,8 +16,11 @@ namespace RPG.Core
                 {
                     Destroy(targetToDestroy);
                 }
+                else
+                {
+                    Destroy(gameObject);
+                }
             }
-            else Destroy(gameObject);
         }
     }
 }

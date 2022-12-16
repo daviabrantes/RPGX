@@ -87,6 +87,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198969377575857584, guid: 7098bdbdcde165049872f566c6a00e5f, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198969377575857584, guid: 7098bdbdcde165049872f566c6a00e5f, type: 3}
       propertyPath: moveWithTransform
       value: 0
       objectReference: {fileID: 0}
@@ -106,7 +110,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4829491530746772, guid: 7098bdbdcde165049872f566c6a00e5f, type: 3}
   m_PrefabInstance: {fileID: 7909995430210119651}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6951609467625332596
+--- !u!114 &3737623417051986513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
