@@ -1,4 +1,5 @@
 using RPG.Attributes;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +23,7 @@ namespace RPG.Combat
                 return;
             }
             health = fighter.GetTarget();
-            GetComponent<Text>().text = health.GetPercentage().ToString("F0") + "%";
+            GetComponent<Text>().text = String.Format("{0:0}/{1:0}", health.GetHealthPoints(), health.GetMaxHealthPoints());
         }
     }
 }

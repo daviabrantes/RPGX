@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace RPG.Attributes
 
         private void Update()
         {
-            GetComponent<Text>().text = health.GetPercentage().ToString("F0") + "%";
+            GetComponent<Text>().text = String.Format("{0:0}/{1:00}", health.GetHealthPoints(), health.GetMaxHealthPoints());
         }
     }
 }

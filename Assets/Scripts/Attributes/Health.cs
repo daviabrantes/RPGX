@@ -11,6 +11,7 @@ namespace RPG.Attributes
         [SerializeField] float regenerationPercentage = 70;
 
         float healthPoints = -1f;
+
         bool isDead = false;
 
         private void Start()
@@ -29,12 +30,24 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
+            print(gameObject.name + " took damage: " + damage);
+
             healthPoints = Mathf.Max(healthPoints - damage, 0);
             if (healthPoints == 0)
             {
                 Die();
                 AwardExperience(instigator);
             }
+        }
+
+        public float GetHealthPoints()
+        {
+            return healthPoints;
+        }
+
+        public float GetMaxHealthPoints()
+        {
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         public float GetPercentage()
@@ -74,7 +87,7 @@ namespace RPG.Attributes
         {
             healthPoints = (float)state;
 
-            if (healthPoints == 0)
+            if (healthPoints <= 0)
             {
                 Die();
             }
