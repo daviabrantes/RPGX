@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using RPG.Core;
+using RPG.Saving;
 using UnityEngine;
 using UnityEngine.AI;
-using RPG.Saving;
 using RPG.Attributes;
 
 namespace RPG.Movement
@@ -17,21 +14,21 @@ namespace RPG.Movement
         NavMeshAgent navMeshAgent;
         Health health;
 
-        void Start()
+        private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             health = GetComponent<Health>();
         }
 
+        private void Start()
+        {
+        }
+
         void Update()
         {
             navMeshAgent.enabled = !health.IsDead();
-            UpdateAnimator();
-        }
 
-        public void Cancel()
-        {
-            navMeshAgent.isStopped = true;
+            UpdateAnimator();
         }
 
         public void StartMoveAction(Vector3 destination, float speedFraction)
@@ -47,9 +44,14 @@ namespace RPG.Movement
             navMeshAgent.isStopped = false;
         }
 
+        public void Cancel()
+        {
+            navMeshAgent.isStopped = true;
+        }
+
         private void UpdateAnimator()
         {
-            Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
+            Vector3 velocity = navMeshAgent.velocity;
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
@@ -57,27 +59,16 @@ namespace RPG.Movement
 
         public object CaptureState()
         {
-            Dictionary<string, object> data = new Dictionary<string, object>();
-            data["position"] = new SerializableVector3(transform.position);
-            data["rotation"] = new SerializableVector3(transform.eulerAngles);
-            return data;
+            return new SerializableVector3(transform.position);
         }
 
         public void RestoreState(object state)
         {
-            Dictionary<string, object> data = (Dictionary<string, object>)state;
-            GetComponent<NavMeshAgent>().enabled = false;
-            Vector3 sourcePosition = ((SerializableVector3)data["position"]).ToVector();
-            NavMeshHit closestHit;
-            if (NavMesh.SamplePosition(sourcePosition, out closestHit, 500, 1))
-            {
-                transform.position = closestHit.position;
-            }
-            else
-            {
-                Debug.Log("Unable to locate NavMesh!");
-            }
-            GetComponent<NavMeshAgent>().enabled = true;
+            SerializableVector3 position = (SerializableVector3)state;
+            navMeshAgent.enabled = false;
+            transform.position = position.ToVector();
+            navMeshAgent.enabled = true;
+            GetComponent<ActionScheduler>().CancelCurrentAction();
         }
     }
 }
