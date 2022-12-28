@@ -4,6 +4,7 @@ using RPG.Movement;
 using RPG.Core;
 using UnityEngine;
 using RPG.Attributes;
+using UnityEngine.EventSystems;
 
 namespace RPG.Control
 {
@@ -24,7 +25,8 @@ namespace RPG.Control
         {
             None,
             Movement,
-            Combat
+            Combat,
+            UI
         }
         
         private void Awake() 
@@ -33,11 +35,27 @@ namespace RPG.Control
         }
         private void Update()
         {
-            if (health.IsDead()) return;
+            if (InteractWithUI()) return;
+            if (health.IsDead())
+            {
+                SetCursor(CursorType.None);
+                return;
+            }
+
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
 
             SetCursor(CursorType.None);
+        }
+
+        private bool InteractWithUI()
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                SetCursor(CursorType.UI);
+                return true;
+            }
+            return false;
         }
 
         private bool InteractWithCombat()

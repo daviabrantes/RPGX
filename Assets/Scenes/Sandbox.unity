@@ -4823,6 +4823,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6.51
       objectReference: {fileID: 0}
+    - target: {fileID: 3457267194660757440, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6931327955414523016, guid: ba8ebf56b9e0ab2478a1eabd322e45a7, type: 3}
       propertyPath: m_SizeDelta.x
       value: 76.7719
