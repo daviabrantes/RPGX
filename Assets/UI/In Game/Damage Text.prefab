@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 677387375747838080}
   - component: {fileID: 8882457189820061751}
   - component: {fileID: 2996665783933710706}
+  - component: {fileID: -2028961666518826102}
   m_Layer: 5
   m_Name: Damage Text
   m_TagString: Untagged
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1000
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1197540102787234503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +223,15 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &-2028961666518826102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098948462767866407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f056b011c94a4724d8fbd110b30fc91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
