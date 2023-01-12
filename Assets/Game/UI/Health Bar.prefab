@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 7564221082014526668, guid: b6d5dd7cf3e30d2479975468a8471955, type: 3}
   foreground: {fileID: 5228099451294847810}
+  rootCanvas: {fileID: 369284023159653031}
 --- !u!1 &7382436602553412496
 GameObject:
   m_ObjectHideFlags: 0
